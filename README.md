@@ -19,3 +19,7 @@ Das Ziel des Projektes ist es, Fake News aus verschiedenen Datenquellen anhand M
   Beispiel<br>
      *python predict_fever.py --csv ../collectors/csv/telegram.csv --out predictions/predictions_telegram.csv* <br>
      *python predict_fever.py --text "Germany is in central Europe"*
+
+ #### Rest-API
+ Eine REST Schnittstelle wurde gebaut, um einem Server die Business Logic bereitzustellen. Die dependencies sollte man vorher installieren mit *pip install -r requirements.txt* aus dem app Folder. Die Anwendung kann mit folgendem Befehl starten. <br><br>
+ *uvicorn app:app --reload --host 0.0.0.0 --port 8000*
