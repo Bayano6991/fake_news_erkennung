@@ -1,0 +1,22 @@
+# Core
+pandas
+python-dotenv
+
+# Reddit
+praw
+
+# RSS feeds
+feedparser
+
+# YouTube
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+
+# Telegram
+telethon
+
+# Web scraping (for Lemmy, Slashdot, etc.)
+requests
+beautifulsoup4
