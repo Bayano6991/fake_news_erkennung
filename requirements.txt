@@ -1,13 +1,12 @@
-# Core Hugging Face libraries
 datasets==2.20.0
 transformers==4.44.2
 
-# ML / metrics
+
 scikit-learn==1.5.1
 
-# Deep learning backend
+
 torch==2.4.1
 
-# Optional but recommended
+
 accelerate==0.34.2
 evaluate==0.4.2
