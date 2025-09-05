@@ -1,5 +1,5 @@
 # fake_news_erkennung
-Web-Mining Projekt zur Erkennung von Fake News aus diversen Informationsquellen
+Web-Mining Projekt zur Erkennung von Fake News aus diversen Informationsquellen.
 
 ### Beschreibung
 Das Ziel des Projektes ist es, Fake News aus verschiedenen Datenquellen anhand ML Models zu erkennen. Die Nachrichten stammen aus diversen Bereichen wie Politik, Wirtschaft, Kultur, Wissenschaft und Sport. Zum Training der Daten (Texten) wurde mehrere Modellen verwendet wie *RoBERTa*, *distil-RoBERTa* oder *deberta*. Als Datenzsatz zum Training der Modelle wurden LIAR und Fever verwendet. Die Voraussagen sind leider nicht immer zuverlässig, denn die Trainingsdaten wurden nicht genug bzw. das Model zum Training hatte nicht genug Parameter.
