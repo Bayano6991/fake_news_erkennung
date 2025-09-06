@@ -10,7 +10,7 @@ Das Ziel des Projektes ist es, Fake News aus verschiedenen Datenquellen anhand M
 *python <name>_collector.py* <br> 'name' könnte reddit, youtube oder telegram sein je nachdem aus welcher Quelle man die Daten erhalten möchte. Dafür sollte man die Umgebungsveriable Datei (.env) mit entsprechenden Informationen ausfüllen.
 
 #### Trainieren der Modelle
-  *python train_<suffix>.py*. <br><br>Es gibt mehrere Modelltrainier. Der *train_fever.py* im Vergleich zu anderen verwendet nicht LIAR sondern Fever (https://fever.ai/dataset/fever.html oder https://huggingface.co/datasets/fever/fever) als Datensatz zum Trainieren.
+  *python train<_suffix>.py*. *suffix* gilt für ein spezieller Trainer z.B trainer_fever.py als Modell, das mit fever Datensatz trainiert wurde. <br><br>Es gibt mehrere Modelltrainier. Der *train_fever.py* im Vergleich zu anderen verwendet nicht LIAR sondern Fever (https://fever.ai/dataset/fever.html oder https://huggingface.co/datasets/fever/fever) als Datensatz zum Trainieren.
 
 
 #### Vorhersagen
