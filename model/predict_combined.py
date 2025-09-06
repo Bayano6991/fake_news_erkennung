@@ -7,9 +7,7 @@ import argparse
 import torch.nn.functional as F
 from pathlib import Path
 
-# -----------------
-# Load model
-# -----------------
+
 MODEL_DIR = Path(__file__).parent / "deberta-combined"   # <- put your combined model folder here
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -27,9 +25,7 @@ BINARY_LABELS = {
     "NOT ENOUGH INFO": "UNKNOWN"
 }
 
-# -----------------
-# Predict a single text
-# -----------------
+
 def predict_text(text: str):
     inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=256)
     inputs = {k: v.to(device) for k, v in inputs.items()}
@@ -41,9 +37,7 @@ def predict_text(text: str):
         binary_label = BINARY_LABELS[fever_label]
         return {"text": text, "label": binary_label, "score": score.item()}
 
-# -----------------
-# Predict a CSV
-# -----------------
+
 def predict_csv(input_csv: str, out_csv: str, text_column: str = "text"):
     df = pd.read_csv(input_csv)
     predictions = []
@@ -61,9 +55,7 @@ def predict_csv(input_csv: str, out_csv: str, text_column: str = "text"):
     result_df.to_csv(out_csv, index=False)
     print(f"✅ Predictions saved to {out_csv}")
 
-# -----------------
-# CLI
-# -----------------
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Predict with Combined Model (FEVER + LIAR + ...).")
     parser.add_argument("--text", type=str, help="Single text to classify")
